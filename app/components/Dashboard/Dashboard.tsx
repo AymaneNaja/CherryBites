@@ -15,34 +15,10 @@ function Dashboard({ }: Props) {
     alt="alt"
     width={1500}
     height={1500}
-    className="spin-and-shine rounded-lg shadow-lg"
+    className="spin-and-shine rounded-lg "
   />
-  {/* reviews */}
 </div>
 
-<style jsx>{`
-  .spin-and-shine {
-    animation: spin 10s linear infinite, shine 3s ease-in-out infinite;
-  }
-
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes shine {
-    0%, 100% {
-      box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0);
-    }
-    50% {
-      box-shadow: 0 0 20px 15px rgba(255, 255, 255, 0.8);
-    }
-  }
-`}</style>
             <div className='w-11/12 sm:w-2/4 mx-auto flex flex-col gap-4'>
                 <p className='lg:text-7xl xl:text-7xl md:text-5xl  text-5xl  text-black font-semibold'>{`it's not just Food,it's an Expirence.`}</p>
                 {/* buttons */}

@@ -1,3 +1,73 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shine {
+  0% {
+    filter: brightness(100%);
+  }
+  50% {
+    filter: brightness(120%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+
+.spin-and-shine {
+  animation: 
+    spin 20s linear infinite,
+    shine 3s ease-in-out infinite;}
+  
+/* Typewriter Effect */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Shine Effect */
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.typewriter-shine {
+  display: inline-block;
+  overflow: hidden; /* Ensures text is revealed gradually */
+  white-space: pre-wrap; /* Allows text to wrap into multiple lines */
+  animation: 
+    typewriter 6s steps(40, end), /* Typewriter effect (6 seconds) */
+    shine 3s linear infinite; /* Shine effect (3 seconds per cycle) */
+  
+  /* Gradient for shine effect */
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: black; /* Ensure text is visible */
+  line-height: 1.5; /* Adjust line height for better readability */
+  max-width: 800px; /* Limit width to ensure text wraps into 3 rows */
+  margin: 0 auto; /* Center the text */
+}
