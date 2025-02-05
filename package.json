@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "prisma generate && next build ",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -21,7 +21,7 @@
     "react-stars": "^2.2.5"
   },
   "devDependencies": {
-    "@prisma/client": "^5.20.0",
+    "@prisma/client": "^6.3.1",
     "@types/bcrypt": "^5.0.2",
     "@types/node": "^20",
     "@types/react": "^18",
@@ -35,7 +35,7 @@
     "html-loader": "^5.1.0",
     "next-auth": "^5.0.0-beta.20",
     "postcss": "^8",
-    "prisma": "^5.19.1",
+    "prisma": "^6.3.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5",
     "zod": "^3.23.8"
